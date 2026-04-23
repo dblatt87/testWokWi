@@ -1,20 +1,23 @@
-<!---
+### Description
 
-This file is used to generate your project datasheet. Please fill in the information below and delete any unused
-sections.
+This circuit will output a string of characters ('tiny tapeout') to the 7-segment display.
 
-You can also include images in this folder and reference them in the markdown. Each image must be less than
-512 kb in size, and the combined size of all images must be less than 1 MB.
--->
+The logic to light the characters appears in the bottom half of the simulation window.
 
-## How it works
+The top half of the simulation window implements a modulo-11 counter. In other words, the counter increments up to 11 then resets. This counter is used to determine which character we should output to the 7-segment display.
 
-Explain how your project works
+The truth table for the design can be found in the [Design Spreadsheet](https://docs.google.com/spreadsheets/d/1-h9pBYtuxv6su2EC8qBc6nX_JqHXks6Gx5nmHFQh_30/edit?usp=sharing)
 
-## How to test
+| SW      | Function        | 
+|---------|-----------------|
+| 1       | N/A             | 
+| 2       | Reset           | 
+| 3       | N/A             |
+| 4       | Clock Disable   | 
+| 5       | A               | 
+| 6       | B               |
+| 7       | C               | 
+| 8       | D               | 
 
-Explain how to use your project
 
-## External hardware
-
-List external hardware used in your project (e.g. PMOD, LED display, etc), if any
+Design [inspired by Rakesh Peter's tt01 submission](https://github.com/r4d10n/tinytapeout-HELLo-3orLd-7seg)
